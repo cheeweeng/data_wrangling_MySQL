@@ -60,6 +60,10 @@ The numeric values in the identified columns have been mapped to their correspon
 <div></div>  
 
 ## Optimise the table for efficient storage  
+
+The DESCRIBE TMA_data_labelled statement must be run separately from the ALTER TABLE query and the result is as follows:
+<img src="https://github.com/user-attachments/assets/c5f00572-2aba-4694-b85b-e52ab99fb37c">  
+
 The ALTER TABLE statement was used to modify the data type in order to save storage space while not losing any information.  
 The valid values in column ‘org’ are ‘Org A’ to ‘Org D’, the maximum length is 5. Hence, using VARCHAR(5) is optimal   
 The valid values in column ‘dept’ are ‘Dept 1 to ‘Dept 3’, the maximum length is 6. Hence, using VARCHAR(6) is optimal   
