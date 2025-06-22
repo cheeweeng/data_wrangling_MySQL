@@ -82,10 +82,10 @@ The numeric values in the identified columns have been mapped to their correspon
 
 
 ## 📊 Summary Tables
-Two summary tables are generated using GROUP BY queries to explore relationships, each table is accompanied by a brief interpretation in the main report.  
+<p>Two summary tables are generated using GROUP BY queries to explore relationships, each table is accompanied by a brief interpretation in the main report.</p>
 
-## Summary table #1 – Coordination influenced Willingness to Recommend.  
-This table investigate how the coordination level among the different parts of the organisation (measured by the column ‘coordinated’) influenced users’ willingness to recommend the services. I also tracked the result by each year so as to see the trend over time.  
+<p>## Summary table #1 – Coordination influenced Willingness to Recommend.</p>
+<div>This table investigate how the coordination level among the different parts of the organisation (measured by the column ‘coordinated’) influenced users’ willingness to recommend the services. I also tracked the result by each year so as to see the trend over time.</div>  
 <div style="display: block; margin-bottom: 20px;">
 <img src="https://github.com/user-attachments/assets/4ff1267c-5f42-4f61-a57f-e709b45c7a1c">  
 <div>The results revealed that when different parts of the organisations are coordinated (shown as ALWAYS), the average willingness score (which is average willingness_to_recommend) are the highest over the two surveyed year in 2022 and 2023.  
@@ -94,9 +94,9 @@ As willingness to recommend can be linked to users’ satisfaction level, this t
 This query provides actionable insights into the relationships between the coordination level among different departments and the users’ willingness_to_recommend and helping the organisation make data-driven decisions.</div>
 
 ## Summary table #2 – Age Group and Gender based perception of services
-This table investigate the average similarity_to_ideal score among users of various age groups and by their genders.   
+<p>This table investigate the average similarity_to_ideal score among users of various age groups and by their genders.</p>   
 <div style="display: block; margin-bottom: 20px;">
-<img src="https://github.com/user-attachments/assets/a0259048-42eb-429a-b844-f80eed034c3a">    
+<p><img src="https://github.com/user-attachments/assets/a0259048-42eb-429a-b844-f80eed034c3a"></p>    
 <div>The results reveal how the different age groups and genders influence their perception of the services rendered by the organisations relative to their ideal. Generally the average similarity to ideal scores are quite high, suggesting the services rendered are relatively close to the perception of the users. However, if we zoomed in further, the lower age groups have higher scores than the older age groups. This could suggest that younger users have lower expectations than their older peers.  
 Across the different age groups, the differences in the scores between genders are rather small, and quite insignificant. This could suggest that the services provided by the organisations are not gender-specific.</div>
 
