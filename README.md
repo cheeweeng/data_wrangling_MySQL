@@ -29,7 +29,7 @@ To map the numeric values with their corresponding text labels according to the 
   <div>
     <strong>For the ‘urgency’ variable</strong>, when the value is <code>1</code>, then the corresponding text label is <code>P1</code>, and so on and so forth.
   </div>
-  <img src="https://github.com/user-attachments/assets/8d4c3e21-f5d9-4e2e-8fc1-025c7c94c21f">
+  <img src="https://github.com/user-attachments/assets/8d4c3e21-f5d9-4e2e-8fc1-025c7c94c21f" alt="Image" width="220" style="margin-right: 15px;">
   <div>
     For ‘subsidy’ variable, when the value is 1, then the corresponding text label is ‘Y’ so on and so forth.
   </div>
@@ -38,11 +38,11 @@ To map the numeric values with their corresponding text labels according to the 
     <strong>For ‘coordinated’ variable, when the value is 1, then the corresponding text label is ‘Never’, </div> 
   <div>when value is 2, then ‘Sometimes’, so on and so forth.
   </div>
-  <img src="https://github.com/user-attachments/assets/cdbdf3c5-04aa-40ca-b40c-5efe05c24488" alt="Image" style="margin-right: 15px;">  
+  <img src="https://github.com/user-attachments/assets/cdbdf3c5-04aa-40ca-b40c-5efe05c24488" alt="Image" width="220" style="margin-right: 15px;">  
     <div>
       For the similarity_to_ideal variable, the valid values are in numeric 0 – 10. The CASE statement was used to map when the value is 11, then the corresponding text label is ‘Unsure’ and ‘NA’ when the value is 999. In the query, “ELSE similarity_to_ideal” tells MySQL to keep 0-10 as is if the value is not 11 or 999.
     </div>
-  <img src="https://github.com/user-attachments/assets/44f19bde-3361-4c55-a85f-a9b64d900182" alt="Image" style="margin-right: 15px;">
+  <img src="https://github.com/user-attachments/assets/44f19bde-3361-4c55-a85f-a9b64d900182" alt="Image" width="220" style="margin-right: 15px;">
     <div>
       For the willingness_to_recommend variable, when the value is 1, then the corresponding text label is ‘Definitely No’, </div>
       <div>when value is 2, then ‘Probably No’, so on and so forth.
@@ -52,17 +52,17 @@ To map the numeric values with their corresponding text labels according to the 
 ## Convert org_date to calendar date variable    
       
 The ‘org_date’ column was converted into a calendar date variable named ‘caldate’ using DATE_ADD() function.  
-<img src="https://github.com/user-attachments/assets/68d35be7-e555-473e-9d89-37e4374d2829">
+<img src="https://github.com/user-attachments/assets/68d35be7-e555-473e-9d89-37e4374d2829" alt="Image" style="margin-right: 15px;">
 <div>According to the data dictionary, the ‘org_date’ shows the “Number of days since 9 Aug 1965”. This means the base date is 1965-08-09 and the numeric values in each field shows the number of days since the base date. Using DATE_ADD() function, this code convert the column into a DATE type.</div>
 
 The numeric values in the identified columns have been mapped to their corresponding text labels and a new column named ‘caldate’ with MySQL DATE type ‘2022-04-01’ has been added.   
-<img src="https://github.com/user-attachments/assets/b00fbf66-8850-433a-9cf7-cb45734cbfa5">
+<img src="https://github.com/user-attachments/assets/b00fbf66-8850-433a-9cf7-cb45734cbfa5" alt="Image" style="margin-right: 15px;">
 <div></div>  
 
 ## Optimise the table for efficient storage  
 
 The DESCRIBE TMA_data_labelled statement must be run separately from the ALTER TABLE query and the result is as follows:
-<img src="https://github.com/user-attachments/assets/c5f00572-2aba-4694-b85b-e52ab99fb37c">  
+<img src="https://github.com/user-attachments/assets/c5f00572-2aba-4694-b85b-e52ab99fb37c" alt="Image" style="margin-right: 15px;">  
 
 The ALTER TABLE statement was used to modify the data type in order to save storage space while not losing any information.  
 The valid values in column ‘org’ are ‘Org A’ to ‘Org D’, the maximum length is 5. Hence, using VARCHAR(5) is optimal   
