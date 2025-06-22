@@ -20,8 +20,10 @@ Clean and enhance the data:
 
 5. Explain insights through commentary based on SQL outputs.
 
-To map the numeric values with their corresponding text labels according to the data dictionary, CASE statements were used in SQL query in Table Plus. The transformed columns are ‘urgency’ , ‘subsidy’, ‘gender’, ‘coordinated’, ‘similarity_to_ideal’ and ‘willingness_to_recommend’.  
- For the ‘urgency’ variable, when the value is 1, then the corresponding text label is ‘P1’ so on and so forth.
+To map the numeric values with their corresponding text labels according to the data dictionary, CASE statements were used in SQL query in Table Plus. The transformed columns are ‘urgency’ , ‘subsidy’, ‘gender’, ‘coordinated’, ‘similarity_to_ideal’ and ‘willingness_to_recommend’.    
+
+![Image](https://github.com/user-attachments/assets/ebcf333c-de10-4c92-9c99-f033e4dc3a37) For the ‘urgency’ variable, when the value is 1,  
+then the corresponding text label is ‘P1’ so on and so forth.
 
 
 
