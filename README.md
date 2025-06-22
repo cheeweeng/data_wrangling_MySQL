@@ -63,10 +63,10 @@ The numeric values in the identified columns have been mapped to their correspon
 <img src="https://github.com/user-attachments/assets/b00fbf66-8850-433a-9cf7-cb45734cbfa5" alt="Image" style="display: block; margin-bottom: 15px;">
 <div></div>  
 
-##cOptimise the table for efficient storage  
+## Optimise the table for efficient storage    
 
-The DESCRIBE TMA_data_labelled statement must be run separately from the ALTER TABLE query and the result is as follows:
-<img src="https://github.com/user-attachments/assets/c5f00572-2aba-4694-b85b-e52ab99fb37c" alt="Image" style="margin-right: 15px;">  
+<p>The DESCRIBE TMA_data_labelled statement must be run separately from the ALTER TABLE query and the result is as follows:</p>
+<img src="https://github.com/user-attachments/assets/c5f00572-2aba-4694-b85b-e52ab99fb37c" alt="Image" style="margin-bottom: 15px;">  
 
 <div>The ALTER TABLE statement was used to modify the data type in order to save storage space while not losing any information.</div>
 <div>The valid values in column ‘org’ are ‘Org A’ to ‘Org D’, the maximum length is 5. Hence, using VARCHAR(5) is optimal</div> 
@@ -85,7 +85,7 @@ Two summary tables are generated using GROUP BY queries to explore relationships
 
 ## Summary table #1 – Coordination influenced Willingness to Recommend.  
 This table investigate how the coordination level among the different parts of the organisation (measured by the column ‘coordinated’) influenced users’ willingness to recommend the services. I also tracked the result by each year so as to see the trend over time.  
-![Image](https://github.com/user-attachments/assets/4ff1267c-5f42-4f61-a57f-e709b45c7a1c)  
+<img src="https://github.com/user-attachments/assets/4ff1267c-5f42-4f61-a57f-e709b45c7a1c">  
 The results revealed that when different parts of the organisations are coordinated (shown as ALWAYS), the average willingness score (which is average willingness_to_recommend) are the highest over the two surveyed year in 2022 and 2023.  
 On the other hand, when the different parts of the organisations are not coordinated (shown as NEVER), the average willingness score are the lowest (2.24 in 2022 and 2.52 in 2023).
 As willingness to recommend can be linked to users’ satisfaction level, this table revealed that better coordination among different parts and departments correlates to the willingness_to_recommend score among users. There were not significant differences among the score for each coordinated category in each year.  
@@ -93,7 +93,7 @@ This query provides actionable insights into the relationships between the coord
 
 ## Summary table #2 – Age Group and Gender based perception of services
 This table investigate the average similarity_to_ideal score among users of various age groups and by their genders.  
-![Image](https://github.com/user-attachments/assets/a0259048-42eb-429a-b844-f80eed034c3a)  
+<img src="https://github.com/user-attachments/assets/a0259048-42eb-429a-b844-f80eed034c3a">  
 The results reveal how the different age groups and genders influence their perception of the services rendered by the organisations relative to their ideal. Generally the average similarity to ideal scores are quite high, suggesting the services rendered are relatively close to the perception of the users. However, if we zoomed in further, the lower age groups have higher scores than the older age groups. This could suggest that younger users have lower expectations than their older peers.  
 Across the different age groups, the differences in the scores between genders are rather small, and quite insignificant. This could suggest that the services provided by the organisations are not gender-specific.  
 
