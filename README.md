@@ -3,7 +3,7 @@ This [repository](https://github.com/cheeweeng/data_wrangling_MySQL) contains th
 The assignment focuses on importing, transforming, and analysing survey data collected from users of public services provided by four organisations.
 
 ## 🛠️ Technologies Used  
-Language: SQL (MySQL) 
+Language: SQL (MySQL)   
 Tools: MySQL Server, MySQL Workbench, Microsoft Word  
 
 ## 🎯 Project Objective
@@ -29,6 +29,18 @@ To map the numeric values with their corresponding text labels according to the 
   <div>
     <strong>For the ‘urgency’ variable</strong>, when the value is <code>1</code>, then the corresponding text label is <code>P1</code>, and so on and so forth.
   </div>
+  <img src="https://github.com/user-attachments/assets/e9c1f81e-871a-4f2b-9b11-066d664d70a5" alt="Image" width="220" style="margin-right: 10px;">  
+  <div>
+    <strong>For ‘coordinated’ variable, when the value is 1, then the corresponding text label is ‘Never’, when value is 2, then ‘Sometimes’, so on and so forth.
+  </div>
+  <img src="https://github.com/user-attachments/assets/cdbdf3c5-04aa-40ca-b40c-5efe05c24488" alt="Image" style="margin-right: 10px;">  
+    <div>
+      For the similarity_to_ideal variable, the valid values are in numeric 0 – 10. The CASE statement was used to map when the value is 11, then the corresponding text label is ‘Unsure’ and ‘NA’ when the value is 999. In the query, “ELSE similarity_to_ideal” tells MySQL to keep 0-10 as is if the value is not 11 or 999.
+    </div>
+  <img src="https://github.com/user-attachments/assets/44f19bde-3361-4c55-a85f-a9b64d900182" alt="Image" style="margin-right: 10px;">
+    <div>
+      For the willingness_to_recommend variable, when the value is 1, then the corresponding text label is ‘Definitely No’, when value is 2, then ‘Probably No’, so on and so forth.
+    </div>
 </div>
 
 
