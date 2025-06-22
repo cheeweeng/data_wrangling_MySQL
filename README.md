@@ -4,6 +4,7 @@ The assignment focuses on importing, transforming, and analysing survey data col
 
 ## 🛠️ Technologies Used  
 Language: SQL (MySQL) 
+Tools: MySQL Server, MySQL Workbench, Microsoft Word  
 
 ## 🎯 Project Objective
 Import survey data collected from 4,858 users across four public-funded organisations.
@@ -20,14 +21,22 @@ Clean and enhance the data:
 
 5. Explain insights through commentary based on SQL outputs.
 
+# Code explained:
 To map the numeric values with their corresponding text labels according to the data dictionary, CASE statements were used in SQL query in Table Plus. The transformed columns are ‘urgency’ , ‘subsidy’, ‘gender’, ‘coordinated’, ‘similarity_to_ideal’ and ‘willingness_to_recommend’.    
 
-![Image](https://github.com/user-attachments/assets/ebcf333c-de10-4c92-9c99-f033e4dc3a37) For the ‘urgency’ variable, when the value is 1,  
-then the corresponding text label is ‘P1’ so on and so forth.
+  <div style="display: flex; align-items: flex-start;">
+  <img src="https://github.com/user-attachments/assets/ebcf333c-de10-4c92-9c99-f033e4dc3a37" alt="Image" width="200" style="margin-right: 10px;">
+  <div>
+    <strong>For the ‘urgency’ variable</strong>, when the value is <code>1</code>, then the corresponding text label is <code>P1</code>, and so on and so forth.
+  </div>
+</div>
 
 
 
-Tools: MySQL Server, MySQL Workbench, Microsoft Word  
+
+
+
+
 ## 📊 Summary Tables
 Two summary tables are generated using GROUP BY queries to explore relationships, each table is accompanied by a brief interpretation in the main report.
 
