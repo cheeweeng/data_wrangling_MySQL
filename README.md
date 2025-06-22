@@ -53,9 +53,9 @@ To map the numeric values with their corresponding text labels according to the 
   when value is <code>2</code>, then <code>‘Probably No’</code>, so on and so forth.
 </div>
       
-## Convert org_date to calendar date variable    
+## Convert org_date to calendar date variable      
       
-The ‘org_date’ column was converted into a calendar date variable named ‘caldate’ using DATE_ADD() function.  
+<div>The ‘org_date’ column was converted into a calendar date variable named ‘caldate’ using DATE_ADD() function.</div> 
 <img src="https://github.com/user-attachments/assets/68d35be7-e555-473e-9d89-37e4374d2829" alt="Image" style="display: block; margin-bottom: 15px;">
 <div>According to the data dictionary, the ‘org_date’ shows the “Number of days since 9 Aug 1965”. This means the base date is 1965-08-09 and the numeric values in each field shows the number of days since the base date. Using DATE_ADD() function, this code convert the column into a DATE type.</div>
 
@@ -63,24 +63,22 @@ The numeric values in the identified columns have been mapped to their correspon
 <img src="https://github.com/user-attachments/assets/b00fbf66-8850-433a-9cf7-cb45734cbfa5" alt="Image" style="display: block; margin-bottom: 15px;">
 <div></div>  
 
-## Optimise the table for efficient storage  
+##cOptimise the table for efficient storage  
 
 The DESCRIBE TMA_data_labelled statement must be run separately from the ALTER TABLE query and the result is as follows:
 <img src="https://github.com/user-attachments/assets/c5f00572-2aba-4694-b85b-e52ab99fb37c" alt="Image" style="margin-right: 15px;">  
 
-The ALTER TABLE statement was used to modify the data type in order to save storage space while not losing any information.  
-The valid values in column ‘org’ are ‘Org A’ to ‘Org D’, the maximum length is 5. Hence, using VARCHAR(5) is optimal   
-The valid values in column ‘dept’ are ‘Dept 1 to ‘Dept 3’, the maximum length is 6. Hence, using VARCHAR(6) is optimal   
-The valid values in column ‘subsidy’ are ‘Y’ and ‘N’. using CHAR(1) is more storage-efficient than VARCHAR for single-character field.  
-For the ‘age’ variable, tinyint UNSIGNED was used as UNSIGNED ensures that it only holds non-negative values. In the data dictionary, the valid values of age variable are “any integer greater than zero”.  
-The caldate variable is assigned the DATE type.  
-The valid values in column ‘gender’ are ‘M’ and ‘F’. hence, using CHAR(1) is more storage-efficient than VARCHAR for single-character field.  
-In the ‘coordinated’ variable, the maximum length of the valid values is ‘Sometimes’, which is 9 characters, hence VARCHAR(9) was applied.  
-In the ‘similarity_to_ideal’ variable, the maximum length of the valid values is ‘Unsure’, which is 6 characters, hence VARCHAR(6) was applied.  
-For the ‘willingness_to_recommend’ variable, the maximum length of the valid values is ‘Definitely Yes’, which is 14 characters, hence VARCHAR(14) was applied.  
-
-
-
+<div>The ALTER TABLE statement was used to modify the data type in order to save storage space while not losing any information.</div>
+<div>The valid values in column ‘org’ are ‘Org A’ to ‘Org D’, the maximum length is 5. Hence, using VARCHAR(5) is optimal</div> 
+<div>The valid values in column ‘dept’ are ‘Dept 1 to ‘Dept 3’, the maximum length is 6. Hence, using VARCHAR(6) is optimal</div>
+<div>The valid values in column ‘subsidy’ are ‘Y’ and ‘N’. using CHAR(1) is more storage-efficient than VARCHAR for single-character field.</div>
+<div>For the ‘age’ variable, tinyint UNSIGNED was used as UNSIGNED ensures that it only holds non-negative values.  
+  In the data dictionary, the valid values of age variable are “any integer greater than zero”.</div> 
+<div>The caldate variable is assigned the DATE type.</div>
+<div>The valid values in column ‘gender’ are ‘M’ and ‘F’. hence, using CHAR(1) is more storage-efficient than VARCHAR for single-character field.</div>
+<div>In the ‘coordinated’ variable, the maximum length of the valid values is ‘Sometimes’, which is 9 characters, hence VARCHAR(9) was applied.</div> 
+<div>In the ‘similarity_to_ideal’ variable, the maximum length of the valid values is ‘Unsure’, which is 6 characters, hence VARCHAR(6) was applied.</div>
+<div>For the ‘willingness_to_recommend’ variable, the maximum length of the valid values is ‘Definitely Yes’, which is 14 characters, hence VARCHAR(14) was applied.</div>
 
 ## 📊 Summary Tables
 Two summary tables are generated using GROUP BY queries to explore relationships, each table is accompanied by a brief interpretation in the main report.
