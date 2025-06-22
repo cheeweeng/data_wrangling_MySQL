@@ -31,7 +31,9 @@ Tools: MySQL Server, MySQL Workbench, Microsoft Word
 ## 📊 Summary Tables
 Two summary tables are generated using GROUP BY queries to explore relationships such as:
 
-Recommendation likelihood vs. perceived coordination
+Summary table #1 – Coordination influenced Willingness to Recommend.  
+This table investigate how the coordination level among the different parts of the organisation (measured by the column ‘coordinated’) influenced users’ willingness to recommend the services. I also tracked the result by each year so as to see the trend over time.  
+
 
 Age group & gender-based vs. perceptions of services
 
