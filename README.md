@@ -29,9 +29,14 @@ To map the numeric values with their corresponding text labels according to the 
   <div>
     <strong>For the ‘urgency’ variable</strong>, when the value is <code>1</code>, then the corresponding text label is <code>P1</code>, and so on and so forth.
   </div>
+  <img src="https://github.com/user-attachments/assets/8d4c3e21-f5d9-4e2e-8fc1-025c7c94c21f">
+  <div>
+    For ‘subsidy’ variable, when the value is 1, then the corresponding text label is ‘Y’ so on and so forth.
+  </div>
   <img src="https://github.com/user-attachments/assets/e9c1f81e-871a-4f2b-9b11-066d664d70a5" alt="Image" width="220" style="margin-right: 10px;">  
   <div>
-    <strong>For ‘coordinated’ variable, when the value is 1, then the corresponding text label is ‘Never’, when value is 2, then ‘Sometimes’, so on and so forth.
+    <strong>For ‘coordinated’ variable, when the value is 1, then the corresponding text label is ‘Never’, </div> 
+  <div>when value is 2, then ‘Sometimes’, so on and so forth.
   </div>
   <img src="https://github.com/user-attachments/assets/cdbdf3c5-04aa-40ca-b40c-5efe05c24488" alt="Image" style="margin-right: 10px;">  
     <div>
@@ -39,12 +44,32 @@ To map the numeric values with their corresponding text labels according to the 
     </div>
   <img src="https://github.com/user-attachments/assets/44f19bde-3361-4c55-a85f-a9b64d900182" alt="Image" style="margin-right: 10px;">
     <div>
-      For the willingness_to_recommend variable, when the value is 1, then the corresponding text label is ‘Definitely No’, when value is 2, then ‘Probably No’, so on and so forth.
+      For the willingness_to_recommend variable, when the value is 1, then the corresponding text label is ‘Definitely No’, </div>
+      <div>when value is 2, then ‘Probably No’, so on and so forth.
     </div>
 </div>
+      
+## Convert org_date to calendar date variable    
+      
+The ‘org_date’ column was converted into a calendar date variable named ‘caldate’ using DATE_ADD() function.  
+<img src="https://github.com/user-attachments/assets/68d35be7-e555-473e-9d89-37e4374d2829">
+<div>According to the data dictionary, the ‘org_date’ shows the “Number of days since 9 Aug 1965”. This means the base date is 1965-08-09 and the numeric values in each field shows the number of days since the base date. Using DATE_ADD() function, this code convert the column into a DATE type.</div>
 
+The numeric values in the identified columns have been mapped to their corresponding text labels and a new column named ‘caldate’ with MySQL DATE type ‘2022-04-01’ has been added.   
+<img src="https://github.com/user-attachments/assets/b00fbf66-8850-433a-9cf7-cb45734cbfa5">
+<div></div>  
 
-
+## Optimise the table for efficient storage  
+The ALTER TABLE statement was used to modify the data type in order to save storage space while not losing any information.  
+The valid values in column ‘org’ are ‘Org A’ to ‘Org D’, the maximum length is 5. Hence, using VARCHAR(5) is optimal   
+The valid values in column ‘dept’ are ‘Dept 1 to ‘Dept 3’, the maximum length is 6. Hence, using VARCHAR(6) is optimal   
+The valid values in column ‘subsidy’ are ‘Y’ and ‘N’. using CHAR(1) is more storage-efficient than VARCHAR for single-character field.  
+For the ‘age’ variable, tinyint UNSIGNED was used as UNSIGNED ensures that it only holds non-negative values. In the data dictionary, the valid values of age variable are “any integer greater than zero”.  
+The caldate variable is assigned the DATE type.  
+The valid values in column ‘gender’ are ‘M’ and ‘F’. hence, using CHAR(1) is more storage-efficient than VARCHAR for single-character field.  
+In the ‘coordinated’ variable, the maximum length of the valid values is ‘Sometimes’, which is 9 characters, hence VARCHAR(9) was applied.  
+In the ‘similarity_to_ideal’ variable, the maximum length of the valid values is ‘Unsure’, which is 6 characters, hence VARCHAR(6) was applied.  
+For the ‘willingness_to_recommend’ variable, the maximum length of the valid values is ‘Definitely Yes’, which is 14 characters, hence VARCHAR(14) was applied.  
 
 
 
