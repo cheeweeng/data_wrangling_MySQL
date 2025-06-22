@@ -26,7 +26,7 @@ To map the numeric values with their corresponding text labels according to the 
 
 <div style="display: block; margin-bottom: 20px;">
   <img src="https://github.com/user-attachments/assets/ebcf333c-de10-4c92-9c99-f033e4dc3a37" alt="Urgency Mapping" width="200" style="display: block; margin-bottom: 10px;">
-  <p><strong>For the ‘urgency’ variable</strong>, when the value is <code>1</code>, then the corresponding text label is <code>P1</code>, and so on and so forth.</p>
+  <p>For the ‘urgency’ variable, when the value is <code>1</code>, then the corresponding text label is <code>P1</code>, and so on and so forth.</p>
 </div>
 
 <div style="display: block; margin-bottom: 20px;">
@@ -36,19 +36,21 @@ To map the numeric values with their corresponding text labels according to the 
 
 <div style="display: block; margin-bottom: 20px;">
   <img src="https://github.com/user-attachments/assets/e9c1f81e-871a-4f2b-9b11-066d664d70a5" alt="Coordinated Mapping" width="220" style="display: block; margin-bottom: 10px;">
-  <p><strong>For ‘coordinated’ variable</strong>, when the value is <code>1</code>, then the corresponding text label is <code>Never</code>,</p>
+  <p>For ‘coordinated’ variable, when the value is <code>1</code>, then the corresponding text label is <code>Never</code>,</p>
   <p>when value is <code>2</code>, then <code>Sometimes</code>, so on and so forth.</p>
 </div>
 
 <div style="display: block; margin-bottom: 20px;">
   <img src="https://github.com/user-attachments/assets/cdbdf3c5-04aa-40ca-b40c-5efe05c24488" alt="Image" width="220" style="display: block; margin-bottom: 15px;">  
-      For the similarity_to_ideal variable, the valid values are in numeric 0 – 10. The CASE statement was used to map when the value is 11, then the corresponding text label is ‘Unsure’ and ‘NA’ when the value is 999. In the query, “ELSE similarity_to_ideal” tells MySQL to keep 0-10 as is if the value is not 11 or 999.
-    </div>
+  <div>For the similarity_to_ideal variable, the valid values are in numeric 0 – 10. The CASE statement was used to map when the value is <code>11</code>, 
+  then the corresponding text label is ‘Unsure’ and ‘NA’ when the value is <code>999</code>
+  In the query, “ELSE similarity_to_ideal” tells MySQL to keep 0-10 as is if the value is not <code>11</code> or <code>999</code>.
+  </div>
   
   <div style="display: block; margin-bottom: 20px;">
   <img src="https://github.com/user-attachments/assets/44f19bde-3361-4c55-a85f-a9b64d900182" alt="Image" width="220" style="display: block; margin-bottom: 15px;">
-      For the willingness_to_recommend variable, when the value is 1, then the corresponding text label is ‘Definitely No’, </div>
-      <div>when value is 2, then ‘Probably No’, so on and so forth.
+  <div>For the willingness_to_recommend variable, when the value is <code>1</code>, then the corresponding text label is <code>‘Definitely No’</code>
+  when value is <code>2</code>, then <code>‘Probably No’</code>, so on and so forth.
 </div>
       
 ## Convert org_date to calendar date variable    
