@@ -102,6 +102,7 @@ This query provides actionable insights into the relationships between the coord
 <div style="display: block; margin-bottom: 20px;">
 <p><img src="https://github.com/user-attachments/assets/a0259048-42eb-429a-b844-f80eed034c3a"></p>    
 <div>The results reveal how the different age groups and genders influence their perception of the services rendered by the organisations relative to their ideal. Generally the average similarity to ideal scores are quite high, suggesting the services rendered are relatively close to the perception of the users. However, if we zoomed in further, the lower age groups have higher scores than the older age groups. This could suggest that younger users have lower expectations than their older peers.  
-Across the different age groups, the differences in the scores between genders are rather small, and quite insignificant. This could suggest that the services provided by the organisations are not gender-specific.</div>  
+Across the different age groups, the differences in the scores between genders are rather small, and quite insignificant. This could suggest that the services provided by the organisations are not gender-specific.</div>  <br></div>
 
+  
 Back to [Projects main page](https://cheeweeng.github.io/)
